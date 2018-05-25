@@ -6,7 +6,7 @@ public class Quick_sort {
 	
 	public static void main(String[] args) {
 		Quick_sort algorithm = new Quick_sort();
-		int[] input = {16,7,3,2,20,4,1,17,8};
+		int[] input = {16,7,3,2,20,4,1,1,17,8};
 		algorithm.quickSort(input, 0, input.length - 1);
 		for(int i = 0; i < input.length; i++)
 			System.out.print(input[i] + " ");
@@ -25,7 +25,7 @@ public class Quick_sort {
 				// place this value to left
 				a[first] = a[last];
 				// from left to right, loop to find a index which all left sequence is smaller than pivot.
-				while(first < last && a[first] < pivot)
+				while(first < last && a[first] <= pivot)
 					first ++;
 				// place this value to right.
 				a[last] = a[first];
