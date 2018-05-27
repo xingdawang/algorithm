@@ -74,25 +74,22 @@ public class Doubly_linked_list {
 		return node;
 	}
 	
-	// Print from head to the tail (tail prev and next pointer = null, but data exist).
+	// Print from head to the tail.
 	public void printFromHead(Node node) {
 		Node temp = node;
-		while(temp.next != null) {
+		while(temp!= null) {
 			System.out.println(temp.data);
 			temp = temp.next;
 		}
-		// Last node.next = null, but node.data exists.
-		System.out.println(temp.data);
 	}
 	
-	// Print from tail back to head. (head prev and next pointer = null, but data exist)
+	// Print from tail back to head.
 	public void printFromTail(Node node) {
 		Node temp = node;
-		while(temp.prev != null) {
+		while(temp != null) {
 			System.out.println(temp.data);
 			temp = temp.prev;
 		}
-		System.out.println(temp.data);
 	}
 
 	public static void main(String[] args) {
@@ -100,7 +97,7 @@ public class Doubly_linked_list {
 		
 		// Create first node as head and tail.
 		Node head = doublely_linked_list.createHead(30);	// head (head is empty with prev and next point = null)
-		Node tail = head;	// tail
+		Node tail = head;	// tail(head keeps left, tail keeps right)
 		
 		// Insert some data into the list.
 		Node node = doublely_linked_list.addFromHead(10, head);
